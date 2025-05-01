@@ -1,77 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Shopping List</title>
     <link rel="stylesheet" href="styles.css" />
-    <style>
-       .success{
-        color:white;
-        background-color: green;
-        width: 500px;
-        padding: 5px;
-        margin:5px 0 15px 0;
-       }
-    </style>
 </head>
 <body>
 
-    <div class="container">
+<div class="container">
+    <h1>Add Grocery Item</h1>
 
-        <h1>Add Grocery Item</h1>
+    <form id="form1">
 
-        <div id="notification"></div>
+        <div class="input-group">
+            <label for="dairy">Dairy Products</label>
+            <input type="text" id="dairy" />
+            <button type="button" class="add-icon-btn" onclick="addItem('dairy')">🛒 Add Item</button>
+        </div>
 
-        <form id="form1">
-            <div>
-                <label for="dairy">Dairy Products</label>
-                <input type="text" id="dairy" name="dairy" class="u-full-width"/>
-            </div>
+        <div class="input-group">
+            <label for="meat">Meat & Poultry</label>
+            <input type="text" id="meat" />
+            <button type="button" class="add-icon-btn" onclick="addItem('meat')">🛒 Add Item</button>
+        </div>
 
-            <div>
-                <label for="meat">Meat & Poultry</label>
-                <input type="text" id="meat" name="meat" class="u-full-width"/>
-            </div>
+        <div class="input-group">
+            <label for="produce">Fruits & Vegetables</label>
+            <input type="text" id="produce" />
+            <button type="button" class="add-icon-btn" onclick="addItem('produce')">🛒 Add Item</button>
+        </div>
 
-            <div>
-                <label for="produce">Fruits & Vegetables</label>
-                <input type="text" id="produce" name="produce" class="u-full-width"/>
-            </div>
+        <div class="input-group">
+            <label for="grains">Grains</label>
+            <input type="text" id="grains" />
+            <button type="button" class="add-icon-btn" onclick="addItem('grains')">🛒 Add Item</button>
+        </div>
 
-            <div>
-                <label for="grains">Grains</label>
-                <input type="text" id="grains" name="grains" class="u-full-width"/>
-            </div>
+        <div class="input-group">
+            <label for="other">Other</label>
+            <input type="text" id="other" />
+            <button type="button" class="add-icon-btn" onclick="addItem('other')">🛒 Add Item</button>
+        </div>
 
-            <div>
-                <label for="other">Other</label>
-                <input type="text" id="other" name="other" class="u-full-width"/>
-            </div>
+    </form>
 
-            <div>
-                <input type="submit" value="Add Item" class="u-full-width"/>
-            </div>
-        </form>
+    <table id="data" class="u-full-width">
+        <thead>
+        <tr>
+            <th>Dairy Products</th>
+            <th>Meat & Poultry</th>
+            <th>Fruits & Vegetables</th>
+            <th>Grains</th>
+            <th>Other</th>
+            <th>X</th>
+        </tr>
+        </thead>
+        <tbody id="grocery-list">
+        <!-- Items inserted dynamically -->
+        </tbody>
+    </table>
+</div>
 
-        <table id="data" class="u-full-width" >
-            <thead>
-                <tr>
-                    <th>Dairy Products</th>
-                    <th>Meat & Poultry</th>
-                    <th>Fruits & Vegetables</th>
-                    <th>Grains</th>
-                    <th>Other</th>
-                    <th>X</th>
-                </tr>
-            </thead>
-            <tbody id="grocery-list">
-
-            </tbody>
-        </table>
-
-    </div>
-
-    <script src="script.js" defer></script>
+<script src="script.js" defer></script>
 </body>
 </html>
