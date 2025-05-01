@@ -1,0 +1,82 @@
+:root {
+    --mint:      #56E39F;
+    --aqua:      #59C9A5;
+    --sage:      #5B6C5D;
+    --plum:      #3B2C35;
+    --eggplant:  #2A1F2D;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif ;
+    background: linear-gradient(to bottom, var(--mint), var(--aqua));
+    padding: 2rem;
+    max-width: 600px;
+    margin: auto;
+    color: var(--eggplant);
+}
+
+h1 {
+    text-align: center;
+    color: var(--eggplant);
+    margin-bottom: 0.25rem;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: none;
+    background: #eee;
+}
+
+button {
+    align-self: center;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--plum);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--eggplant);
+    transform: scale(1.05);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 3rem;
+}
+
+li {
+    background-color: #fff;
+    color: var(--plum);
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
